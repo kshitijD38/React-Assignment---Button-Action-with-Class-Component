@@ -1,27 +1,33 @@
 import React, { Component, useState } from "react";
-import '../styles/App.css';
+import "../styles/App.css";
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { render: false };
+  constructor() {
+    super();
+
+    this.state = {
+      renderPara: false
+    };
   }
-  handleClick = () => {
-    this.setState({
-      render: true
-    });
-  };
   render() {
     return (
       <div id="main">
         {/* Do not remove this main div!! */}
-        {this.state.render ? (
+
+        {this.state.renderPara ? (
           <p id="para">
-            Hello, I've learnt to use the full-stack evaluation tool. This
-            makes me so happy
+            Hello, I've learnt to use the full-stack evaluation tool. This makes
+            me so happy
           </p>
         ) : (
-          <button id="click" onClick={this.handleClick}>
-            Click
+          <button
+            id="click"
+            onClick={() => {
+              this.setState({
+                renderPara: true
+              });
+            }}
+          >
+            click
           </button>
         )}
       </div>
