@@ -16,8 +16,8 @@ class App extends Component {
         {/* Do not remove this main div!! */}
         {this.state.render ? (
           <p id="para">
-            "Hello, I've learnt to use the full-stack evaluation tool. This
-            makes me so happy"
+            Hello, I've learnt to use the full-stack evaluation tool. This
+            makes me so happy
           </p>
         ) : (
           <button id="click" onClick={this.handleClick}>
